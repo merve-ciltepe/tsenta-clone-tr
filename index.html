@@ -3,9 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Raindrops — Zihinsel Matematik & Refleks Oyunu</title>
+    <title>Başvur.AI — Akıllı İş Başvuru Asistanı</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#6366f1',
+              secondary: '#8b5cf6',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+      body { font-family: 'Inter', sans-serif; }
+      .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+      .card-hover { transition: all 0.3s ease; }
+      .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+      .animate-pulse-slow { animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+      .score-bar { transition: width 1s ease-in-out; }
+      @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+      .fade-in { animation: fadeIn 0.5s ease forwards; }
+      .typewriter { overflow: hidden; border-right: 2px solid #6366f1; white-space: nowrap; animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite; }
+      @keyframes typing { from { width: 0 } to { width: 100% } }
+      @keyframes blink-caret { from, to { border-color: transparent } 50% { border-color: #6366f1; } }
+    </style>
   </head>
-  <body style="margin:0;">
+  <body style="margin:0;" class="bg-gray-50">
     <div id="root"></div>
     <script type="module" src="/main.tsx"></script>
   </body>

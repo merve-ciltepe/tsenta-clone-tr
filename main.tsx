@@ -1,6 +1,3 @@
-import ReactDOM from "react-dom/client";
-import App from "./App";
-
-ReactDOM.createRoot(document.getElementById("root")!).render(
-  <App />
-);
+// App.tsx kendi ReactDOM.createRoot çağrısını yapıyor
+// Bu dosya gerekmiyor ama Vite entry point olarak tutuluyor
+import "./App";
